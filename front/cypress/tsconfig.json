@@ -1,9 +1,16 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    "types": ["cypress", "node"],
     "isolatedModules": false
   },
+
+  "files": [
+    "./e2e/login.cy.ts"
+  ],
   "include": [
-    "../node_modules/cypress"
+    "**/*.ts",
+    "../cypress.config.ts"
   ]
 }
+
