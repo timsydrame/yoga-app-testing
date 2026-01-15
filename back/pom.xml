@@ -84,9 +84,10 @@
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
-				<artifactId>h2</artifactId>
-				<scope>test</scope>
+			<artifactId>h2</artifactId>
+			<scope>test</scope>
 		</dependency>
+
 
 	</dependencies>
 
@@ -156,7 +157,7 @@
 										<limit>
 											<counter>LINE</counter>
 											<value>COVEREDRATIO</value>
-											<minimum>0.8</minimum>
+											<minimum>0.80</minimum>
 										</limit>
 									</limits>
 								</rule>
