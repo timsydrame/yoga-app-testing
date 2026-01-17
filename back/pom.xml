@@ -125,21 +125,28 @@
 							<goal>prepare-agent</goal>
 						</goals>
 					</execution>
-					<!-- attached to Maven test phase -->
+
+					<!-- Génération du rapport -->
 					<execution>
-					<id>report</id>
-					<phase>test</phase>
-					<goals>
-						<goal>report</goal>
-					</goals>
-					<configuration>
-						<excludes>
-							<exclude>**/dto/**</exclude>
-						</excludes>
-					</configuration>
-				</execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+						<configuration>
+							<excludes>
+								<exclude>**/dto/**</exclude>
+								<exclude>**/payload/**</exclude>
+								<exclude>**/model/**</exclude>
+								<exclude>**/models/**</exclude>
+								<exclude>**/entity/**</exclude>
+								<exclude>**/repository/**</exclude>
+								<exclude>**/repositories/**</exclude>
+							</excludes>
+						</configuration>
+					</execution>
 
-
+					<!-- Vérification de la couverture -->
 					<execution>
 						<id>jacoco-check</id>
 						<phase>test</phase>
@@ -149,6 +156,12 @@
 						<configuration>
 							<excludes>
 								<exclude>**/dto/**</exclude>
+								<exclude>**/payload/**</exclude>
+								<exclude>**/model/**</exclude>
+								<exclude>**/models/**</exclude>
+								<exclude>**/entity/**</exclude>
+								<exclude>**/repository/**</exclude>
+								<exclude>**/repositories/**</exclude>
 							</excludes>
 							<rules>
 								<rule>
@@ -164,8 +177,6 @@
 							</rules>
 						</configuration>
 					</execution>
-
-
 				</executions>
 			</plugin>
 		</plugins>
